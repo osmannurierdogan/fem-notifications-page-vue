@@ -5,7 +5,7 @@ li.notification__item(:class="addUnreadStyles" @click="toggleReadUnread")
     p #[strong.notification__content__user-name {{ props.notification.user.name }}]  #[span.notification__content__prefix {{ props.notification.prefix }} ] #[span.notification__content__title(:class="groupTextColor") {{ props.notification.title }} ] #[span.notification__content__status(v-if="props.notification.status == 'unread'")]
     span.notification__content__time {{ props.notification.time }}
     p.notification__content__message(v-if="props.notification.type== 'dm'") {{ props.notification?.message}}
-  img(v-if="props.notification.type=='comment'").notification__comment-image(:src="props.notification.comment_image")
+  img.notification__comment-image(v-if="props.notification.type=='comment'", :src="props.notification.comment_image")
 </template>
 <script setup>
 import { computed } from "vue";
