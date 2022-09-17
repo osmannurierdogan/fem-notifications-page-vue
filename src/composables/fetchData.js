@@ -1,7 +1,5 @@
-// import path from "path";
-// import axios from "axios";
 export async function fetchData() {
-  await fetch("./src/assets/db.json")
+  await fetch("/src/assets/db.json")
     .then((response) => response.json())
     .then((data) => {
       console.log(data.notificationList);

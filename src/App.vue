@@ -9,26 +9,20 @@ import FooterComponent from "./components/FooterComponent.vue";
 import NotificationHeaderComponent from "./components/NotificationHeaderComponent.vue";
 import NotificationListComponent from "./components/NotificationListComponent.vue";
 import { computed, ref, onMounted } from "vue";
-import axios from "axios";
-// import { fetchData } from "./composables/fetchData.js";
 const notificationList = ref([]);
-const fetchData = () => {
-  fetch("./src/assets/db.json")
+const fetchData = async () => {
+  await fetch("/src/assets/db.json")
     .then((response) => response.json())
     .then((data) => {
+      console.log(data.notificationList);
       notificationList.value = data.notificationList;
     });
 };
 
 onMounted(() => {
-  // notificationList.value = fetchData();
   fetchData();
 });
 
-// const notificationListLength = () => {
-//   // console.log(notificationList.value);
-//   return notificationList.value.filter((i) => i.status == "unread").length || 0;
-// };
 const unreadItemCount = computed(
   () => notificationList.value.filter((i) => i.status == "unread").length
 );
