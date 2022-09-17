@@ -1,6 +1,6 @@
 <template lang="pug">
 main.container
-  NotificationHeaderComponent(:notificationCount="notificationListLength", :markAllRead="markAllRead")
+  NotificationHeaderComponent(:notificationCount="unreadItemCount", :markAllRead="markAllRead")
   NotificationListComponent(:notificationList="notificationList")
 </template>
 
@@ -9,6 +9,8 @@ import FooterComponent from "./components/FooterComponent.vue";
 import NotificationHeaderComponent from "./components/NotificationHeaderComponent.vue";
 import NotificationListComponent from "./components/NotificationListComponent.vue";
 import { computed, ref, onMounted } from "vue";
+import axios from "axios";
+// import { fetchData } from "./composables/fetchData.js";
 const notificationList = ref([]);
 const fetchData = () => {
   fetch("./src/assets/db.json")
@@ -17,15 +19,22 @@ const fetchData = () => {
       notificationList.value = data.notificationList;
     });
 };
-const notificationListLength = computed(() => {
-  return notificationList.value.filter((i) => i.status == "unread").length;
+
+onMounted(() => {
+  // notificationList.value = fetchData();
+  fetchData();
 });
+
+// const notificationListLength = () => {
+//   // console.log(notificationList.value);
+//   return notificationList.value.filter((i) => i.status == "unread").length || 0;
+// };
+const unreadItemCount = computed(
+  () => notificationList.value.filter((i) => i.status == "unread").length
+);
 const markAllRead = () => {
   notificationList.value.forEach((item) => (item.status = "read"));
 };
-onMounted(() => {
-  fetchData();
-});
 </script>
 
 <style lang="scss">
