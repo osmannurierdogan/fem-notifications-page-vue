@@ -13,7 +13,7 @@ const notificationList = ref([
   {
     user: {
       name: "Mark Webber",
-      image_url: "assets/images/avatar-mark-webber.webp",
+      image_url: "/src/assets/images/avatar-mark-webber.webp",
     },
     status: "unread",
     prefix: "reacted to your recent posts",
@@ -25,7 +25,7 @@ const notificationList = ref([
   {
     user: {
       name: "Angela Gray",
-      image_url: "assets/images/avatar-angela-gray.webp",
+      image_url: "/src/assets/images/avatar-angela-gray.webp",
     },
     status: "unread",
     prefix: "followed you",
@@ -37,7 +37,7 @@ const notificationList = ref([
   {
     user: {
       name: "Jacob Thompson",
-      image_url: "assets/images/avatar-jacob-thompson.webp",
+      image_url: "/src/assets/images/avatar-jacob-thompson.webp",
     },
     status: "unread",
     prefix: "has joined your group",
@@ -49,7 +49,7 @@ const notificationList = ref([
   {
     user: {
       name: "Rizky Hasanuddin",
-      image_url: "assets/images/avatar-rizky-hasanuddin.webp",
+      image_url: "/src/assets/images/avatar-rizky-hasanuddin.webp",
     },
     status: "read",
     prefix: "sent you a private message",
@@ -63,20 +63,20 @@ const notificationList = ref([
   {
     user: {
       name: "Kimberly Smith",
-      image_url: "assets/images/avatar-kimberly-smith.webp",
+      image_url: "/src/assets/images/avatar-kimberly-smith.webp",
     },
     status: "read",
     prefix: "commented on your picture",
     title: null,
     time: "1 day ago",
     type: "comment",
-    comment_image: "assets/images/image-chess.webp",
+    comment_image: "/src/assets/images/image-chess.webp",
     id: "1115",
   },
   {
     user: {
       name: "Nathan Peterson",
-      image_url: "assets/images/avatar-nathan-peterson.webp",
+      image_url: "/src/assets/images/avatar-nathan-peterson.webp",
     },
     status: "read",
     prefix: "reacted to your recent post",
@@ -88,7 +88,7 @@ const notificationList = ref([
   {
     user: {
       name: "Anna Kim",
-      image_url: "assets/images/avatar-anna-kim.webp",
+      image_url: "/src/assets/images/avatar-anna-kim.webp",
     },
     status: "read",
     prefix: "left the group",
