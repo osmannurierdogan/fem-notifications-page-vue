@@ -11,7 +11,7 @@ import NotificationListComponent from "./components/NotificationListComponent.vu
 import { computed, ref, onMounted } from "vue";
 const notificationList = ref([]);
 const fetchData = async () => {
-  await fetch("db.json")
+  await fetch("./src/assets/db.json")
     .then((response) => response.json())
     .then((data) => {
       notificationList.value = data.notificationList;
