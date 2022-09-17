@@ -1,33 +1,14 @@
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <button type="button" @click="state.count++">count is: {{ state.count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  h1 Mark Webber reacted to your recent post My first tournament today! 1m ago
+  Angela Gray followed you 5m ago Jacob Thompson has joined your group Chess
+  Club 1 day ago Rizky Hasanuddin sent you a private message 5 days ago Hello,
+  thanks for setting up the Chess Club. I've been a member for a few weeks now
+  and I'm already having lots of fun and improving my game. Kimberly Smith
+  commented on your picture 1 week ago Nathan Peterson reacted to your recent
+  post 5 end-game strategies to increase your win rate 2 weeks ago Anna Kim left
+  the group Chess Club 2 weeks ago
 </template>
 
-<script setup>
-import { defineProps, reactive } from 'vue'
+<script setup></script>
 
-defineProps({
-  msg: String
-})
-
-const state = reactive({ count: 0 })
-</script>
-
-<style scoped>
-a {
-  color: #42b983;
-}
-</style>
+<style scoped></style>

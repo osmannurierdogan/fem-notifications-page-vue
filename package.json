@@ -6,12 +6,18 @@
     "build": "vite build",
     "serve": "vite preview"
   },
+  "author": "Osman Nuri Erdogan",
+  "license": "ISC",
   "dependencies": {
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.4",
     "@vue/compiler-sfc": "^3.0.5",
+    "sass": "^1.54.9",
+    "sass-loader": "^13.0.2",
     "vite": "^2.4.0"
   }
 }
