@@ -1,8 +1,20 @@
 <template lang="pug">
 div.notification__header
-  h3 Notifications #[span.notification__quantity 3]
-  button.button.button--mark-all-read Mark all as read
+  h3 Notifications #[span.notification__quantity {{ props.notificationCount }}]
+  button.button.button--mark-all-read(@click="markAllRead") Mark all as read
 </template>
+<script setup>
+const props = defineProps({
+  notificationCount: {
+    type: Number,
+    required: true,
+  },
+  markAllRead: {
+    type: Function,
+    required: true,
+  },
+});
+</script>
 <style lang="scss">
 @import "../assets/sass/variables";
 .notification {
@@ -10,11 +22,10 @@ div.notification__header
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 3px solid orangered; */
     & h3 {
-      font-size: 2.8rem;
-      /* border: 3px solid pink; */
+      font-size: 2.4rem;
     }
+    margin-bottom: 3.2rem;
   }
   &__quantity {
     font-weight: $font-weight-extra-bold;

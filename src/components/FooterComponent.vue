@@ -1,7 +1,7 @@
 <template lang="pug">
 div.attribution Challenge by #[a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor]. Coded by #[a(href="https://www.frontendmentor.io/profile/osmannurierdogan" target="_blank") Osman Nuri Erdogan]
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 .attribution {
   font-size: 11px;
   text-align: center;
