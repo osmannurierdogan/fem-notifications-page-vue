@@ -1,6 +1,6 @@
 <template lang="pug">
 li.notification__item(:class="addUnreadStyles" @click="toggleReadUnread")
-  img.notification__image(:src="require(`${props.notification.user.image_url}`)")  
+  img.notification__image(:src="props.notification.user.image_url")  
   div.notification__content
     p #[strong.notification__content__user-name {{ props.notification.user.name }}]  #[span.notification__content__prefix {{ props.notification.prefix }} ] #[span.notification__content__title(:class="groupTextColor") {{ props.notification.title }} ] #[span.notification__content__status(v-if="props.notification.status == 'unread'")]
     span.notification__content__time {{ props.notification.time }}
