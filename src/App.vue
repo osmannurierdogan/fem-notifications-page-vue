@@ -10,8 +10,8 @@ import NotificationHeaderComponent from "./components/NotificationHeaderComponen
 import NotificationListComponent from "./components/NotificationListComponent.vue";
 import { computed, ref, onMounted } from "vue";
 const notificationList = ref([]);
-const fetchData = async () => {
-  await fetch("./src/assets/db.json")
+const fetchData = () => {
+  fetch("./src/assets/db.json")
     .then((response) => response.json())
     .then((data) => {
       notificationList.value = data.notificationList;
