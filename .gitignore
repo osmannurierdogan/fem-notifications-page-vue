@@ -21,3 +21,6 @@ node_modules
 .DS_Store
 .prettierignore
 >>>>>>> f9543b556927a4f415aa7b927e17389c45f5e44d
+
+# Local Netlify folder
+.netlify
