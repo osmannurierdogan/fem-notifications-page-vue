@@ -5,7 +5,7 @@ const app = Vue.createApp({
         {
           user: {
             name: "Mark Webber",
-            image_url: "../images/avatar-mark-webber.webp",
+            image_url: "./images/avatar-mark-webber.webp",
           },
           status: "unread",
           prefix: "reacted to your recent posts",
@@ -17,7 +17,7 @@ const app = Vue.createApp({
         {
           user: {
             name: "Angela Gray",
-            image_url: "../images/avatar-angela-gray.webp",
+            image_url: "./images/avatar-angela-gray.webp",
           },
           status: "unread",
           prefix: "followed you",
@@ -29,7 +29,7 @@ const app = Vue.createApp({
         {
           user: {
             name: "Jacob Thompson",
-            image_url: "../images/avatar-jacob-thompson.webp",
+            image_url: "./images/avatar-jacob-thompson.webp",
           },
           status: "unread",
           prefix: "has joined your group",
@@ -41,7 +41,7 @@ const app = Vue.createApp({
         {
           user: {
             name: "Rizky Hasanuddin",
-            image_url: "../images/avatar-rizky-hasanuddin.webp",
+            image_url: "./images/avatar-rizky-hasanuddin.webp",
           },
           status: "read",
           prefix: "sent you a private message",
@@ -55,20 +55,20 @@ const app = Vue.createApp({
         {
           user: {
             name: "Kimberly Smith",
-            image_url: "../images/avatar-kimberly-smith.webp",
+            image_url: "./images/avatar-kimberly-smith.webp",
           },
           status: "read",
           prefix: "commented on your picture",
           title: null,
           time: "1 day ago",
           type: "comment",
-          comment_image: "../images/image-chess.webp",
+          comment_image: "./images/image-chess.webp",
           id: "1115",
         },
         {
           user: {
             name: "Nathan Peterson",
-            image_url: "../images/avatar-nathan-peterson.webp",
+            image_url: "./images/avatar-nathan-peterson.webp",
           },
           status: "read",
           prefix: "reacted to your recent post",
@@ -80,7 +80,7 @@ const app = Vue.createApp({
         {
           user: {
             name: "Anna Kim",
-            image_url: "../images/avatar-anna-kim.webp",
+            image_url: "./images/avatar-anna-kim.webp",
           },
           status: "read",
           prefix: "left the group",
