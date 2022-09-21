@@ -30,7 +30,7 @@
         >
           <img
             :src="notification.user.image_url"
-            alt=""
+            :alt="'User Image '+ notification.user.name"
             class="notification__image"
           />
           <div class="notification__content">
@@ -65,7 +65,7 @@
             </p>
           </div>
           <img
-            alt=""
+            alt="Notification Comment Image"
             class="notification__comment-image"
             v-if="notification.type=='comment'"
             :src="notification.comment_image"
