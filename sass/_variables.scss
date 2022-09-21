@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+// @import "./mixins";
 $color-primary-red: hsl(1, 90%, 64%);
 $color-primary-blue: hsl(219, 85%, 26%);
 $color-secondary-white: hsl(0, 0%, 100%);
@@ -20,6 +21,17 @@ $font-family-primary: "Plus Jakarta Sans", sans-serif;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  user-select: none;
+}
+html {
+  font-size: 62.5%;
+  @include responsive(tab-port) {
+    font-size: 55%;
+  }
+}
+body {
+  background-color: $color-secondary-very-light-grayish-blue;
+  font-family: $font-family-primary;
 }
 .button {
   &--mark-all-read {

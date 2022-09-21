@@ -1,0 +1,274 @@
+@import "./mixins";
+@import "./variables";
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: $color-secondary-white;
+  box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  margin: 3% 30%;
+  padding: 3.6rem;
+  @include responsive(tab-port) {
+    margin: 7% 15%;
+  }
+  @include responsive(phone) {
+    margin: 0;
+    padding: 2.4rem;
+    // height: 100vh;
+    margin-bottom: 3rem;
+  }
+}
+.notification {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & h3 {
+      font-size: 2.4rem;
+    }
+    margin-bottom: 3.2rem;
+  }
+  &__quantity {
+    font-weight: $font-weight-extra-bold;
+    border-radius: 0.75rem;
+    background-color: $color-primary-blue;
+    color: $color-secondary-white;
+    padding: 0.5rem 1rem;
+  }
+  &__item {
+    font-size: $font-size-paragraph;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  &__image {
+    width: 5rem;
+    align-self: flex-start;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    line-height: 1.4;
+    gap: 0.15rem;
+    &__prefix {
+      color: $color-secondary-dark-grayish-blue;
+      font-weight: $font-weight-medium;
+      margin-inline: 0.5rem;
+    }
+    &__title {
+      font-weight: $font-weight-extra-bold;
+      color: $color-secondary-dark-grayish-blue;
+    }
+    &__user-name {
+      font-weight: $font-weight-extra-bold;
+    }
+    &__time {
+      color: $color-secondary-dark-grayish-blue;
+    }
+    &__status {
+      border-radius: 50%;
+      margin-left: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      background-color: $color-primary-red;
+    }
+    &__message {
+      margin: 1rem 0;
+      padding: 1.5rem;
+      border: 1px solid $color-secondary-light-grayish-blue-2;
+      color: $color-secondary-dark-grayish-blue;
+    }
+  }
+  &__comment-image {
+    align-self: flex-start;
+    width: 5rem;
+  }
+}
+.blue-text {
+  color: $color-primary-blue;
+}
+.unread-item {
+  background-color: $color-secondary-light-grayish-blue-2;
+}
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+
+  & a {
+    color: hsl(227, 44%, 43%);
+  }
+}
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
+// }
+// .attribution a {
+//   color: hsl(228deg, 45%, 44%);
+// }
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   list-style: none;
+//   text-decoration: none;
+// }
+// .button--mark-all-read {
+//   border: none;
+//   background: 0 0;
+//   outline: 0;
+//   font-weight: 500;
+//   color: hsl(219deg, 12%, 42%);
+//   font-size: 1.6rem;
+//   cursor: pointer;
+// }
+// .notification__header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin-bottom: 3.2rem;
+// }
+// .notification__header h3 {
+//   font-size: 2.4rem;
+// }
+// .notification__quantity {
+//   font-weight: 800;
+//   border-radius: 0.75rem;
+//   background-color: hsl(219deg, 85%, 26%);
+//   color: hsl(0deg, 0%, 100%);
+//   padding: 0.5rem 1rem;
+// }
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   list-style: none;
+//   text-decoration: none;
+// }
+// .button--mark-all-read {
+//   border: none;
+//   background: 0 0;
+//   outline: 0;
+//   font-weight: 500;
+//   color: hsl(219deg, 12%, 42%);
+//   font-size: 1.6rem;
+//   cursor: pointer;
+// }
+// .notification__item {
+//   font-size: 1.6rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   gap: 2.4rem;
+//   padding: 1.5rem;
+//   margin: 1rem 0;
+//   border-radius: 1rem;
+//   cursor: pointer;
+// }
+// .notification__image {
+//   width: 5rem;
+//   align-self: flex-start;
+// }
+// .notification__content {
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+//   flex-direction: column;
+//   line-height: 1.4;
+//   gap: 0.15rem;
+// }
+// .notification__content__prefix {
+//   color: hsl(219deg, 12%, 42%);
+//   font-weight: 500;
+// }
+// .notification__content__title {
+//   font-weight: 800;
+//   color: hsl(219deg, 12%, 42%);
+// }
+// .notification__content__user-name {
+//   font-weight: 800;
+// }
+// .notification__content__time {
+//   color: hsl(219deg, 12%, 42%);
+// }
+// .notification__content__status {
+//   border-radius: 50%;
+//   margin-left: 0.5rem;
+//   width: 1rem;
+//   height: 1rem;
+//   display: inline-block;
+//   background-color: hsl(1deg, 90%, 64%);
+// }
+// .notification__content__message {
+//   margin: 1rem 0;
+//   padding: 1.5rem;
+//   border: 1px solid hsl(205deg, 33%, 90%);
+//   color: hsl(219deg, 12%, 42%);
+// }
+// .notification__comment-image {
+//   align-self: flex-start;
+//   width: 5rem;
+// }
+// .blue-text {
+//   color: hsl(219deg, 85%, 26%);
+// }
+// .unread-item {
+//   background-color: hsl(211deg, 68%, 94%);
+// }
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   list-style: none;
+//   text-decoration: none;
+// }
+// .button--mark-all-read {
+//   border: none;
+//   background: 0 0;
+//   outline: 0;
+//   font-weight: 500;
+//   color: hsl(219deg, 12%, 42%);
+//   font-size: 1.6rem;
+//   cursor: pointer;
+// }
+// html {
+//   font-size: 62.5%;
+// }
+// @media (max-width: 56.25em) {
+//   html {
+//     font-size: 55%;
+//   }
+// }
+// body {
+//   background-color: hsl(210deg, 60%, 98%);
+//   font-family: "Plus Jakarta Sans", sans-serif;
+// }
+// .container {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   background-color: hsl(0deg, 0%, 100%);
+//   box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.15);
+//   border-radius: 1rem;
+//   margin: 7% 25%;
+//   padding: 3.6rem;
+// }
+// @media (max-width: 56.25em) {
+//   .container {
+//     margin: 7% 15%;
+//   }
+// }
+// @media (max-width: 32em) {
+//   .container {
+//     margin: 0;
+//     padding: 2.4rem;
+//   }
+// }

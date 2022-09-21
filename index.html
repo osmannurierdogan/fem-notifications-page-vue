@@ -2,13 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="./images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./dist/main.css" />
+    <!-- <script src="https://unpkg.com/vue@3"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Frontend Mentor - Notifications Page</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <!-- <script type="module" src="/src/composables/fetchData.js"></script> -->
+    <main class="container" id="app">
+      <div class="notification__header">
+        <h3>
+          Notifications
+          <span class="notification__quantity">{{ unreadItemCount }}</span>
+        </h3>
+        <button class="button button--mark-all-read" @click="markAllRead">
+          Mark all as read
+        </button>
+      </div>
+      <ul class="notification__list">
+        <li
+          class="notification__item"
+          :class="addUnreadStyles(notification)"
+          @click="toggleReadUnread(notification)"
+          v-for="notification in notificationList"
+          :key="notification.id"
+        >
+          <img
+            :src="notification.user.image_url"
+            alt=""
+            class="notification__image"
+          />
+          <div class="notification__content">
+            <p>
+              <strong class="notification__content__user-name"
+                >{{ notification.user.name }}</strong
+              >
+              <span class="notification__content__prefix">
+                {{ notification.prefix }}
+              </span>
+              <span
+                class="notification__content__title"
+                :class="groupTextColor"
+              >
+                {{ notification.title }}
+              </span>
+              <span
+                class="notification__content__status"
+                v-if="notification.status == 'unread'"
+              >
+              </span>
+            </p>
+            <span class="notification__content__time">
+              {{ notification.time }}</span
+            >
+            <p
+              class="notification__content__message"
+              v-if="notification.type==
+          'dm'"
+            >
+              {{ notification?.message}}
+            </p>
+          </div>
+          <img
+            alt=""
+            class="notification__comment-image"
+            v-if="notification.type=='comment'"
+            :src="notification.comment_image"
+          />
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+        . Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/osmannurierdogan"
+          target="_blank"
+          >Osman Nuri Erdogan</a
+        >
+      </div>
+    </footer>
+    <script src="./js/app.js" defer></script>
   </body>
 </html>

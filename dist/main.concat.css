@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  user-select: none; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 55%; } }
+
+body {
+  background-color: #f7fafd;
+  font-family: "Plus Jakarta Sans", sans-serif; }
+
+.button--mark-all-read {
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: 500;
+  color: #5e6778;
+  font-size: 1.6rem;
+  cursor: pointer; }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  margin: 3% 30%;
+  padding: 3.6rem; }
+  @media (max-width: 56.25em) {
+    .container {
+      margin: 7% 15%; } }
+  @media (max-width: 32em) {
+    .container {
+      margin: 0;
+      padding: 2.4rem;
+      margin-bottom: 3rem; } }
+
+.notification__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.2rem; }
+  .notification__header h3 {
+    font-size: 2.4rem; }
+
+.notification__quantity {
+  font-weight: 800;
+  border-radius: 0.75rem;
+  background-color: #0a317b;
+  color: white;
+  padding: 0.5rem 1rem; }
+
+.notification__item {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.4rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  cursor: pointer; }
+
+.notification__image {
+  width: 5rem;
+  align-self: flex-start; }
+
+.notification__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  line-height: 1.4;
+  gap: 0.15rem; }
+  .notification__content__prefix {
+    color: #5e6778;
+    font-weight: 500;
+    margin-inline: 0.5rem; }
+  .notification__content__title {
+    font-weight: 800;
+    color: #5e6778; }
+  .notification__content__user-name {
+    font-weight: 800; }
+  .notification__content__time {
+    color: #5e6778; }
+  .notification__content__status {
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background-color: #f65351; }
+  .notification__content__message {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 1px solid #dde7ee;
+    color: #5e6778; }
+
+.notification__comment-image {
+  align-self: flex-start;
+  width: 5rem; }
+
+.blue-text {
+  color: #0a317b; }
+
+.unread-item {
+  background-color: #dde7ee; }
+
+.attribution {
+  font-size: 1rem;
+  text-align: center; }
+  .attribution a {
+    color: #3d529e; }
